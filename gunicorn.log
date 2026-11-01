@@ -1,0 +1,18 @@
+[2026-11-01 06:18:58 +0000] [3426] [INFO] Starting gunicorn 26.2.0
+[2026-11-01 06:18:58 +0000] [3426] [ERROR] Connection in use: ('0.0.0.0', 8000)
+[2026-11-01 06:18:58 +0000] [3426] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+[2026-11-01 06:18:59 +0000] [3426] [ERROR] Connection in use: ('0.0.0.0', 8000)
+[2026-11-01 06:18:59 +0000] [3426] [ERROR] connection to ('0.0.0.0', [2026-11-01 06:24:02 +0000] [2839] [INFO] Handling signal: hup
+[2026-11-01 06:24:02 +0000] [2839] [INFO] Hang up: Master
+[2026-11-01 06:24:02 +0000] [3455] [INFO] Booting worker with pid: 3455
+[2026-11-01 06:24:02 +0000] [2839] [WARNING] Worker (pid:2844) was sent SIGHUP!
+[2026-11-01 06:24:02 +0000] [2839] [INFO] Control socket listening at /run/user/1000/gunicorn.ctl
+Method Not Allowed: /api/token/
+Not Found: /favicon.ico
+Not Found: /
+Not Found: /robots.txt
+Not Found: /sitemap.xml
+Not Found: /.well-known/security.txt
+Not Found: /favicon.ico
+] [3426] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+[2026-11-01 06:19:03 +0000] [3426] [ERROR] Can't connect to ('0.0.0.0', 8000)

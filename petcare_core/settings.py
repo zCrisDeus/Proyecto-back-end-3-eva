@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-)sj&hfo-#)y#ck9c3$=ny7p!-o%-1v+ma*@05=t^yh(1-r1po&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -43,10 +43,12 @@ INSTALLED_APPS = [
     'pacientes',
     'agendamiento',
     'clinica',
+    'drf_yasg',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -82,7 +84,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'petcare_db',
-        'USER': 'postgres',
+        'USER': 'petcare_admin',
         'PASSWORD': 'BD.PostgreSQL.2141',
         'HOST': 'localhost',
         'PORT': '5432',
@@ -143,5 +145,13 @@ REST_FRAMEWORK = {
     ),
     'DEFAULT_PERMISSION_CLASSES': (
         'rest_framework.permissions.IsAuthenticatedOrReadOnly',
+    )
+}
+
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
     )
 }
